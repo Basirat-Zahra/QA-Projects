@@ -1,0 +1,95 @@
+Id,Title,Estimate,Priority,Type,Jira Refs,Github Refs,Azure Refs,Section,Smoke,Regression,Reviewed by QA Lead,Reviewed by QA Manager,Reviewed by PM,To Automate,Automated,Module,To be Moved,Disabled,Steps (Expected),Steps (Steps),Test Data,Preconditions,Created By,Created On,Updated By,Updated On,Description,Bdd_gherkin,Cucumber_tags,Milestone
+557303,Verify that a registered user can leave a review for a purchased book,0m,P1 - Must Test,Functional,,,,Leave a Review on Purchased Books,Yes,Yes,No,No,No,Yes,No,No,No,No,Review is submitted and appears on book page,"1. Login as registered user
+2. Navigate to 'My Purchases'
+3. Select purchased book
+4. Click 'Write Review'
+5. Enter review text (min 20 characters)
+6. Select star rating (1-5)
+7. Click 'Submit'","Book Title: 'The Great Novel', Review Text: 'This book exceeded my expectations...', Rating: 5","1. User is registered and logged in
+2. User has purchased the book
+3. Book exists in purchase history",Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Validates that authenticated users can submit reviews for books they've purchased,,,
+557304,Verify that a user cannot review a book not purchased,0m,P1 - Must Test,Negative,,,,Leave a Review on Purchased Books,No,Yes,No,No,No,Yes,No,No,No,No,'Write Review' button is disabled with tooltip message,"1. Login as registered user
+2. Navigate to book not in purchase history
+3. Verify 'Write Review' button is disabled
+4. Hover to see 'You must purchase this book to review' tooltip",Book Title: 'Unpurchased Book',"1. User is registered
+2. User has not purchased the book",Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Ensures review system integrity by preventing reviews for non-purchased items,,,
+557305,Verify that a user can give a star rating along with review,0m,P1 - Must Test,Functional,,,,Leave a Review on Purchased Books,No,Yes,No,No,No,Yes,No,No,No,No,Star rating is saved and displays with review,"1. Start writing a review
+2. Select 4-star rating
+3. Submit review
+4. Verify rating displays as 4 filled stars
+5. Check rating appears in published review","Rating: 4, Review Text: 'Very good condition and fast delivery'","1. User has purchased book
+2. User hasn't reviewed this book before",Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests the star rating component of the review system,,,
+557306,Verify that a review cannot be submitted without content,0m,P1 - Must Test,Negative,,,,Leave a Review on Purchased Books,No,Yes,No,No,No,Yes,No,No,No,No,Submit button remains disabled with validation error,"1. Start new review
+2. Leave text field empty
+3. Attempt to submit
+4. Verify 'Review text is required' error
+5. Check submit button remains disabled","Rating: 3, Review Text: [empty]",User has purchased book,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Validates mandatory review content requirement,,,
+557307,Verify that user can edit or update their review,0m,P1 - Must Test,Functional,,,,Leave a Review on Purchased Books,No,Yes,No,No,No,Yes,No,No,No,No,Review updates appear immediately,"1. Find existing review
+2. Click 'Edit Review'
+3. Change rating from 3 to 5 stars
+4. Add 'Update: After rereading...' to text
+5. Save changes
+6. Verify updates appear","Original Review: 'It was okay', Updated Review: 'Update: After rereading I love it!'",User has existing review,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests review modification functionality,,,
+557308,Verify review is time-stamped correctly,0m,P1 - Must Test,Functional,,,,Leave a Review on Purchased Books,No,Yes,No,No,No,Yes,No,No,No,No,Timestamp shows correct date/time in local timezone,"1. Submit new review at 10:30 AM
+2. Verify timestamp shows today's date
+3. Check time matches 10:30 AM
+4. Verify timezone adjustment",Submission Time: Current system time,User is submitting review,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Validates timestamp accuracy for reviews,,,
+557309,Verify confirmation message on successful review,0m,P1 - Must Test,Functional,,,,Leave a Review on Purchased Books,No,No,No,No,No,Yes,No,No,No,No,Green success toast appears for 5 seconds,"1. Submit valid review
+2. Verify 'Review submitted successfully!' message
+3. Check message auto-dismisses after 5s","Review Text: 'Great read, highly recommend'",User is submitting review,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests user feedback for successful review submission,,,
+557310,Verify that the review appears under the correct book,0m,P1 - Must Test,Functional,,,,Leave a Review on Purchased Books,No,Yes,No,No,No,Yes,No,No,No,No,Review only appears for the intended book,"1. Review Book A
+2. Navigate to Book A's page - verify review present
+3. Go to Book B's page - verify review absent","Book A: 'Mystery Novel', Book B: 'Romance Novel'",User has purchased both books,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Validates review-book association integrity,,,
+557311,Verify that average rating is displayed on book detail page,0m,P1 - Must Test,Functional,,,,View Average Ratings & User Reviews,Yes,No,No,No,No,Yes,No,No,No,No,Average shows correct calculation to one decimal,"1. Find book with three reviews (5,4,3 stars)
+2. Verify average displays as 4.0
+3. Check star visualization matches","Reviews: 5, 4, 3 stars",Book has multiple reviews,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests average rating calculation and display,,,
+557312,Verify that registered user can view all reviews of a book,0m,P1 - Must Test,Functional,,,,View Average Ratings & User Reviews,No,No,No,No,No,Yes,No,No,No,No,All reviews load with pagination,"1. Login as registered user
+2. Go to book with 15+ reviews
+3. Click 'See All 15 Reviews'
+4. Verify all load with 'Load More' button
+5. Check sorting by newest first",Book with 15+ reviews,User is logged in,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests complete review visibility functionality,,,
+557313,Verify that guest user can view average rating and reviews,0m,P1 - Must Test,Functional,,,,View Average Ratings & User Reviews,Yes,No,No,No,No,Yes,No,No,No,No,Ratings and 3 sample reviews visible,"1. As guest user, visit book page
+2. Verify average rating displays
+3. Check 3 most helpful reviews show
+4. Verify 'Sign In to See More' prompt",Book with multiple reviews,User not logged in,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests review visibility for non-authenticated users,,,
+557315,Verify review content includes user name and submission date,0m,P1 - Must Test,Functional,,,,View Average Ratings & User Reviews,No,No,No,No,No,Yes,No,No,No,No,"Metadata displays as 'By JohnDoe on Jan 5, 2025'","1. View any review
+2. Verify format: 'By [Username] on [Date]'
+3. Check username links to profile
+4. Verify date format matches locale","Username: 'BookLover42', Date: '04/07/2025'",Review exists,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests review metadata display standards,,,
+557314,Verify filtering by rating works (e.g.,0m,P2 - Should Test,Other,functional,,,Home,No,No,Yes,No,No,No,Yes,No,No,No,No,Only 5-star reviews display,"1. Select '5 Stars' filter
+2. Verify only 5-star reviews show
+3. Check count matches (e.g., 'Showing 8 of 15 reviews')
+4. Test other rating filters","Book with mixed ratings (3x5-star, 2x1-star)",Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,04/07/2025 06:29:44,Tests review filtering functionality,,
+557316,Verify that a registered user can report a review,0m,P1 - Must Test,Functional,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,Review is flagged in moderation queue,"1. Find offensive review
+2. Click 'Report'
+3. Select 'Offensive Content'
+4. Add optional comment
+5. Submit
+6. Verify 'Report Received' message","Report Reason: 'Offensive Content', Comment: 'Contains hate speech'",User is logged in,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests review reporting workflow,,,
+557317,Verify that reason for reporting is required,0m,P1 - Must Test,Negative,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,Form cannot be submitted without selection,"1. Click 'Report Review'
+2. Leave reason unselected
+3. Attempt to submit
+4. Verify 'Please select a reason' error",Report Reason: [unselected],User opened report dialog,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Validates required fields in reporting flow,,,
+557318,Verify that duplicate reports from the same user are blocked,0m,P1 - Must Test,Negative,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,'You've already reported this review' message,"1. Report a review
+2. Try reporting same review again
+3. Verify error message
+4. Check report button disabled",Review ID: 556344,User previously reported this review,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Prevents report spamming from single user,,,
+557319,Verify that admin can view reported reviews in dashboard,0m,P1 - Must Test,Functional,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,Report appears in admin queue with all details,"1. Login as admin
+2. Navigate to 'Reported Content'
+3. Find the test report
+4. Verify reason, reporter, and original review show",Admin Credentials: admin@example.com,Reports exist in system,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests admin moderation interface,,,
+557320,Verify that guest users cannot report reviews,0m,P1 - Must Test,Negative,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,Report option redirects to login,"1. As guest user, find review
+2. Verify no report button
+3. Attempt direct /report/reviewid URL
+4. Verify redirect to login page",Review ID: 556344,User not logged in,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Ensures reporting is authenticated-user only,,,
+557321,Verify that review cannot be reported after deletion,0m,P1 - Must Test,Negative,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,'This review no longer exists' message,"1. Admin deletes a review
+2. User attempts to report deleted review
+3. Verify error message",Deleted Review ID: 556344,Review was recently deleted,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Handles reporting of deleted content,,,
+557322,Verify that user receives confirmation message after reporting,0m,P1 - Must Test,Functional,,,,Report Inappropriate Reviews,No,No,No,No,No,Yes,No,No,No,No,'Thank you for your report' confirmation,"1. Submit valid report
+2. Verify confirmation message
+3. Check message includes next steps
+4. Verify message dismisses after 8s",Report Reason: 'Spam',User submitted report,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests user feedback after reporting,,,
+557323,Verify that the reported reason is stored and visible to admin,0m,P1 - Must Test,Functional,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,Admin sees exact report reason,"1. Submit report with 'Incorrect Information'
+2. Admin views report
+3. Verify reason matches exactly
+4. Check reporter username shows",Report Reason: 'Incorrect Information',Report was submitted,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Ensures report metadata integrity,,,

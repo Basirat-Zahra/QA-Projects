@@ -1,0 +1,57 @@
+Id,Title,Estimate,Priority,Type,Jira Refs,Github Refs,Azure Refs,Section,Smoke,Regression,Reviewed by QA Lead,Reviewed by QA Manager,Reviewed by PM,To Automate,Automated,Module,To be Moved,Disabled,Steps (Expected),Steps (Steps),Test Data,Preconditions,Created By,Created On,Updated By,Updated On,Description,Bdd_gherkin,Cucumber_tags,Milestone
+557206,Verify that registered user can securely proceed to checkout,0m,P1 - Must Test,Functional,,,,Proceed to Secure Checkout,Yes,Yes,No,No,No,Yes,No,No,No,No,User reaches secure checkout page,"1. Login as registered user
+2. Add items to cart
+3. Click 'Proceed to Checkout'
+4. Verify secure checkout page loads","Valid user credentials, Cart items",User has items in cart,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test checkout initiation for registered users,,,
+557207,Verify that order summary is shown at checkout,0m,P1 - Must Test,Functional,,,,Proceed to Secure Checkout,Yes,No,No,No,No,Yes,No,No,No,No,Order summary displays correctly,"1. Proceed to checkout
+2. Verify order summary section
+3. Check items, quantities, prices",Multiple cart items,Cart contains items,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test order summary display at checkout,,,
+557208,Verify that user cannot proceed to checkout with empty cart,0m,P1 - Must Test,Negative,,,,Proceed to Secure Checkout,No,Yes,No,No,No,Yes,No,No,No,No,Error message appears,"1. Ensure cart is empty
+2. Attempt to checkout
+3. Verify error message",,Cart is empty,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test empty cart validation at checkout,,,
+557209,Verify that guest user is prompted to register before final checkout,0m,P1 - Must Test,Functional,,,,Proceed to Secure Checkout,Yes,Yes,No,No,No,Yes,No,No,No,No,Registration prompt appears,"1. As guest user, proceed to checkout
+2. Verify registration prompt",Cart items,User is not logged in,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test guest user checkout flow,,,
+557210,Verify that user can select Credit/Debit Card,0m,P1 - Must Test,Functional,,,,Choose from Multiple Payment Methods,Yes,No,No,No,No,Yes,No,No,No,No,Credit card option is selectable,"1. Proceed to payment section
+2. Select Credit/Debit option
+3. Verify fields appear",Valid payment methods,User at payment step,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test credit card payment selection,,,
+557211,Verify that user can select PayPal,0m,P1 - Must Test,Functional,,,,Choose from Multiple Payment Methods,Yes,No,No,No,No,Yes,No,No,No,No,PayPal option is selectable,"1. Proceed to payment section
+2. Select PayPal option
+3. Verify redirect occurs",PayPal test credentials,User at payment step,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test PayPal payment selection,,,
+557212,Verify that stored payment method is pre-selected,0m,P1 - Must Test,Functional,,,,Choose from Multiple Payment Methods,No,Yes,No,No,No,Yes,No,No,No,No,Stored method is selected by default,"1. With saved payment method, proceed to checkout
+2. Verify method is pre-selected",Saved payment details,User has saved payment method,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test saved payment method functionality,,,
+557213,Verify error on selecting unsupported payment method,0m,P1 - Must Test,Negative,,,,Choose from Multiple Payment Methods,No,Yes,No,No,No,Yes,No,No,No,No,Error message appears,"1. Attempt to select unsupported method
+2. Verify error message",Unsupported payment type,User at payment step,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test unsupported payment handling,,,
+557214,Verify that invalid payment method cannot be stored,0m,P1 - Must Test,Security,,,,Choose from Multiple Payment Methods,No,Yes,No,No,No,Yes,No,No,No,No,Invalid method is rejected,"1. Attempt to save invalid payment details
+2. Verify system rejects",Invalid card details,User attempts to save payment,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test payment method validation,,,
+557215,Verify that valid discount code applies correctly,0m,P1 - Must Test,Functional,,,,Apply Discount Codes / Coupons,No,Yes,No,No,No,Yes,No,No,No,No,Discount is applied to total,"1. Apply valid coupon code
+2. Verify discount calculation",Valid coupon code,Cart meets coupon requirements,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test coupon code application,,,
+557216,Verify confirmation message for valid coupon,0m,P1 - Must Test,Functional,,,,Apply Discount Codes / Coupons,No,No,No,No,No,Yes,No,No,No,No,Success message appears,"1. Apply valid coupon
+2. Verify confirmation message",Valid coupon code,Cart meets coupon requirements,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test coupon application feedback,,,
+557217,Verify invalid coupon is rejected,0m,P1 - Must Test,Negative,,,,Apply Discount Codes / Coupons,No,Yes,No,No,No,Yes,No,No,No,No,Error message appears,"1. Apply invalid coupon
+2. Verify rejection message",Invalid/expired coupon code,Cart contains items,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test invalid coupon handling,,,
+557218,Verify that empty coupon field cannot be submitted,0m,P1 - Must Test,Negative,,,,Apply Discount Codes / Coupons,No,Yes,No,No,No,Yes,No,No,No,No,Field validation error appears,"1. Leave coupon field empty
+2. Attempt to apply
+3. Verify error message",,User at coupon entry,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test coupon field validation,,,
+557219,Verify that admin can create and apply new coupon,0m,P1 - Must Test,Functional,,,,Apply Discount Codes / Coupons,No,Yes,No,No,No,Yes,No,No,No,No,New coupon works in checkout,"1. Admin creates new coupon
+2. Apply coupon in checkout
+3. Verify discount","Admin credentials, New coupon details",Admin privileges,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test coupon creation and application,,,
+557220,Verify that payment data is encrypted during transaction,0m,P1 - Must Test,Security,,,,Secure Payment Processing,No,Yes,No,No,No,Yes,No,No,No,No,Data is encrypted,"1. Inspect payment request
+2. Verify encryption
+3. Check SSL/TLS",Payment details,Secure connection established,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test payment data security,,,
+557221,Verify successful payment displays confirmation,0m,P1 - Must Test,Functional,,,,Secure Payment Processing,Yes,No,No,No,No,Yes,No,No,No,No,Order confirmation page appears,"1. Complete valid payment
+2. Verify confirmation page",Valid payment details,All checkout steps complete,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test payment success flow,,,
+557222,Verify failed payment shows error message,0m,P1 - Must Test,Negative,,,,Secure Payment Processing,No,Yes,No,No,No,Yes,No,No,No,No,Payment error appears,"1. Attempt payment with invalid details
+2. Verify error message",Invalid payment details,All checkout steps complete,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test payment failure handling,,,
+557223,Verify transaction receipt is generated,0m,P1 - Must Test,Functional,,,,Secure Payment Processing,No,Yes,No,No,No,Yes,No,No,No,No,Receipt PDF is downloadable,"1. Complete successful payment
+2. Download receipt
+3. Verify contents",Valid payment details,Payment completed,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test receipt generation,,,
+557224,Verify system blocks multiple rapid payment submissions,0m,P1 - Must Test,Security,,,,Secure Payment Processing,No,Yes,No,No,No,Yes,No,No,No,No,Duplicate submission blocked,"1. Submit payment
+2. Quickly resubmit
+3. Verify block",Valid payment details,Payment page loaded,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test duplicate payment protection,,,
+557225,Verify that order confirmation email is sent after successful purchase,0m,P1 - Must Test,Functional,,,,Order Confirmation & Email Notification,No,Yes,No,No,No,Yes,No,No,No,No,Email received in inbox,"1. Complete purchase
+2. Check email inbox
+3. Verify receipt",Valid email address,Purchase completed,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test order confirmation email delivery,,,
+557226,Verify that email contains correct details,0m,P1 - Must Test,Functional,,,,Order Confirmation & Email Notification,No,Yes,No,No,No,Yes,No,No,No,No,Email matches order,"1. Compare email content with order
+2. Verify all details",Order details,Email received,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test order email accuracy,,,
+557227,Verify that email is not sent on failed payment,0m,P1 - Must Test,Negative,,,,Order Confirmation & Email Notification,No,Yes,No,No,No,Yes,No,No,No,No,No email received,"1. Attempt failed payment
+2. Verify no email sent",Invalid payment details,Payment failed,Basirat Zahra,04/10/2025 07:43:54,Basirat Zahra,04/10/2025 07:43:54,Test email suppression for failed payments,,,
