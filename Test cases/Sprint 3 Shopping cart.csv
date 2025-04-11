@@ -1,0 +1,82 @@
+Id,Title,Estimate,Priority,Type,Jira Refs,Github Refs,Azure Refs,Section,Smoke,Regression,Reviewed by QA Lead,Reviewed by QA Manager,Reviewed by PM,To Automate,Automated,Module,To be Moved,Disabled,Steps (Expected),Steps (Steps),Test Data,Preconditions,Created By,Created On,Updated By,Updated On,Description,Bdd_gherkin,Cucumber_tags,Milestone
+557175,Verify that a registered user can add a book to the cart,0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,Yes,Yes,No,No,No,Yes,No,No,No,No,Book is added to cart and visible in cart page,"1. Login as registered user
+2. Browse books
+3. Select a book
+4. Click 'Add to Cart' button","Book details: Title, Author, Price, ISBN",User is registered and logged in,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test the functionality of adding books to cart for registered users,,,
+557176,Verify that guest user can add a book to the cart,0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,Yes,Yes,No,No,No,Yes,No,No,No,No,Book is added to cart and visible in cart page,"1. Browse books as guest user
+2. Select a book
+3. Click 'Add to Cart' button","Book details: Title, Author, Price, ISBN",User is not logged in,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test the functionality of adding books to cart for guest users,,,
+557177,Verify that a success message appears on adding a book,0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,Yes,No,No,No,No,Yes,No,No,No,No,Success message appears after adding book,"1. Add any book to cart
+2. Verify message appears","Book details: Title, Author, Price, ISBN",User is on product page,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Verify UI feedback when adding items to cart,,,
+557178,Verify that cart icon updates after adding a book,0m,P1 - Must Test,User Interface,,,,Add Books to Shopping Cart,Yes,No,No,No,No,Yes,No,No,No,No,Cart icon shows updated item count,"1. Note initial cart count
+2. Add a book
+3. Verify cart count increased","Book details: Title, Author, Price, ISBN",User is on product page,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test UI update of cart icon after adding items,,,
+557179,Verify that duplicate books are grouped in cart,0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,No,Yes,No,No,No,Yes,No,No,No,No,Cart shows quantity as 2 instead of separate entries,"1. Add same book twice
+2. View cart
+3. Verify quantity increased","Book details: Title, Author, Price, ISBN",User has empty cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test cart grouping functionality for duplicate items,,,
+557180,Verify that user can view cart after adding book,0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,Yes,No,No,No,No,Yes,No,No,No,No,Cart page opens showing added book,"1. Add a book to cart
+2. Click cart icon
+3. Verify cart page displays correctly","Book details: Title, Author, Price, ISBN",User has added item to cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test cart viewing functionality after adding items,,,
+557181,Verify that out-of-stock books cannot be added,0m,P1 - Must Test,Negative,,,,Add Books to Shopping Cart,No,Yes,No,No,No,Yes,No,No,No,No,Error message appears and book is not added,"1. Find out-of-stock book
+2. Attempt to add to cart
+3. Verify error message",Out-of-stock book details,Book is marked as out-of-stock,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test system behavior with out-of-stock items,,,
+557182,Verify that discount applies after adding book,0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,No,Yes,No,No,No,Yes,No,No,No,No,Cart shows discounted price,"1. Add book with discount
+2. View cart
+3. Verify discount applied",Book with discount coupon/promo,Discount offer is active,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test discount application functionality,,,
+557183,Verify that adding book persists after refresh (registered),0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,No,Yes,No,No,No,Yes,No,No,No,No,Book remains in cart after refresh,"1. Login as registered user
+2. Add book to cart
+3. Refresh page
+4. Verify book still in cart","Book details: Title, Author, Price, ISBN",User is registered and logged in,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test cart persistence for registered users,,,
+557184,Verify that cart data is stored in session/local storage (guest),0m,P1 - Must Test,Functional,,,,Add Books to Shopping Cart,No,Yes,No,No,No,Yes,No,No,No,No,Cart items persist in session,"1. As guest user, add book to cart
+2. Check session storage
+3. Verify cart data exists","Book details: Title, Author, Price, ISBN",User is not logged in,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test cart storage mechanism for guest users,,,
+557185,Verify that registered user can remove a book,0m,P1 - Must Test,Functional,,,,Remove Books from Cart,No,Yes,No,No,No,Yes,No,No,No,No,Book is removed from cart,"1. Login as registered user
+2. Add book to cart
+3. Remove book from cart
+4. Verify removal","Book details: Title, Author, Price, ISBN",User has items in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test book removal functionality for registered users,,,
+557186,Verify that removing a book updates the cart total,0m,P1 - Must Test,Functional,,,,Remove Books from Cart,No,Yes,No,No,No,Yes,No,No,No,No,Cart total updates correctly,"1. Add multiple books to cart
+2. Note total amount
+3. Remove one book
+4. Verify new total",Multiple book details,Cart contains multiple items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test cart total calculation after removal,,,
+557187,Verify that cart becomes empty after last book is removed,0m,P1 - Must Test,Functional,,,,Remove Books from Cart,No,Yes,No,No,No,Yes,No,No,No,No,Empty cart message appears,"1. Add single book to cart
+2. Remove the book
+3. Verify empty cart state","Book details: Title, Author, Price, ISBN",Cart contains one item,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test empty cart state functionality,,,
+557188,Verify that guest user can remove a book,0m,P1 - Must Test,Functional,,,,Remove Books from Cart,No,Yes,No,No,No,Yes,No,No,No,No,Book is removed from cart,"1. As guest user, add book to cart
+2. Remove book from cart
+3. Verify removal","Book details: Title, Author, Price, ISBN",Guest user has items in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test book removal functionality for guest users,,,
+557189,Verify that success message appears after removal,0m,P1 - Must Test,Functional,,,,Remove Books from Cart,No,No,No,No,No,Yes,No,No,No,No,Success message appears,"1. Remove book from cart
+2. Verify success message appears","Book details: Title, Author, Price, ISBN",Cart contains items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test UI feedback for removal action,,,
+557190,Verify that remove button is functional for all books,0m,P1 - Must Test,Functional,,,,Remove Books from Cart,No,Yes,No,No,No,Yes,No,No,No,No,All books can be removed,"1. Add multiple books to cart
+2. Verify remove button works for each",Multiple book details,Cart contains multiple items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test remove button functionality for all items,,,
+557191,Verify that a user can increase book quantity,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Quantity increases and price updates,"1. Add book to cart
+2. Increase quantity
+3. Verify new quantity and price","Book details: Title, Author, Price, ISBN",Book is in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test quantity increase functionality,,,
+557192,Verify that a user can decrease book quantity,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Quantity decreases and price updates,"1. Add book with quantity >1 to cart
+2. Decrease quantity
+3. Verify new quantity and price","Book details: Title, Author, Price, ISBN",Book in cart with quantity >1,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test quantity decrease functionality,,,
+557193,Verify that quantity cannot go below 1,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Quantity remains at 1,"1. Attempt to decrease quantity to 0
+2. Verify quantity stays at 1","Book details: Title, Author, Price, ISBN",Book is in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test minimum quantity validation,,,
+557194,Verify that total price updates with quantity change,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Total price updates correctly,"1. Change book quantity
+2. Verify total price calculation","Book details: Title, Author, Price, ISBN",Book is in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test price calculation with quantity changes,,,
+557195,Verify guest user can change book quantity,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Quantity changes successfully,"1. As guest user, add book to cart
+2. Change quantity
+3. Verify update","Book details: Title, Author, Price, ISBN",Guest user has items in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test quantity change for guest users,,,
+557196,Verify update quantity doesn't exceed stock,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Error appears when exceeding stock,"1. Attempt to set quantity above stock level
+2. Verify error message",Book with limited stock,Book stock is known,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test stock quantity validation,,,
+557197,Verify that quantity field accepts only numbers,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Non-numeric input is rejected,"1. Attempt to enter non-numeric characters
+2. Verify input is rejected","Invalid characters: letters, symbols",Book is in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test quantity field input validation,,,
+557198,Verify error message appears for invalid quantity,0m,P1 - Must Test,Functional,,,,Update Book Quantity in Cart,No,Yes,No,No,No,Yes,No,No,No,No,Appropriate error message appears,"1. Enter invalid quantity (0, negative, non-numeric)
+2. Verify error message",Invalid quantity values,Book is in cart,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test error handling for invalid quantities,,,
+557199,Verify that total price is correctly calculated,0m,P1 - Must Test,Functional,,,,View Cart Summary,No,Yes,No,No,No,Yes,No,No,No,No,Total matches sum of item prices,"1. Add multiple books to cart
+2. Verify total calculation",Multiple book details,Cart contains items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test cart total calculation accuracy,,,
+557200,Verify discount is applied properly,0m,P1 - Must Test,Functional,,,,View Cart Summary,No,Yes,No,No,No,Yes,No,No,No,No,Discount reflected in final total,"1. Apply discount code/promo
+2. Verify discount calculation",Valid discount code/promo,Discount offer is active,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test discount application in cart summary,,,
+557201,Verify estimated delivery is shown,0m,P1 - Must Test,Functional,,,,View Cart Summary,No,No,No,No,No,Yes,No,No,No,No,Delivery estimate displayed,"1. View cart summary
+2. Verify delivery estimate exists",User location data,Cart contains items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test delivery estimate display,,,
+557202,Verify summary updates on removal,0m,P1 - Must Test,Functional,,,,View Cart Summary,No,Yes,No,No,No,Yes,No,No,No,No,Summary updates immediately,"1. Remove item from cart
+2. Verify summary updates","Book details: Title, Author, Price, ISBN",Cart contains items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test summary update after removal,,,
+557203,Verify summary persists on page refresh,0m,P1 - Must Test,Functional,,,,View Cart Summary,No,Yes,No,No,No,Yes,No,No,No,No,Summary remains after refresh,"1. View cart summary
+2. Refresh page
+3. Verify summary persists","Book details: Title, Author, Price, ISBN",Cart contains items,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test summary persistence,,,
+557204,Verify no summary shown for empty cart,0m,P1 - Must Test,Functional,,,,View Cart Summary,No,Yes,No,No,No,Yes,No,No,No,No,Empty cart message appears,"1. Ensure cart is empty
+2. Verify no summary shown",,Cart is empty,Basirat Zahra,04/10/2025 07:33:53,Basirat Zahra,04/10/2025 07:33:53,Test empty cart summary behavior,,,

@@ -1,0 +1,517 @@
+Id,Title,Estimate,Priority,Type,Jira Refs,Github Refs,Azure Refs,Section,Smoke,Regression,Reviewed by QA Lead,Reviewed by QA Manager,Reviewed by PM,To Automate,Automated,Module,To be Moved,Disabled,Steps (Expected),Steps (Steps),Test Data,Preconditions,Created By,Created On,Updated By,Updated On,Description,Bdd_gherkin,Cucumber_tags,Milestone
+556234,Verify that users can see the list of available book categories,4m,P1 - Must Test,Functional,,,,Browse Books,Yes,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: User should see a list of all available book categories clearly displayed on the page.,"STEP 1: 
+	
+	Navigate to the homepage or book catalog section.
+	
+	
+	Locate the book categories section.
+	
+	
+	Observe the listed categories.",,User is on the homepage or book catalog page.,Basirat Zahra,04/04/2025 16:18:15,Basirat Zahra,04/10/2025 04:18:22,Ensure that users can view a list of all available book categories on the platform.,,,
+556235,Verify that selecting a category displays relevant books,5m,P1 - Must Test,Functional,,,,Browse Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Only books related to the selected category Science Fiction should be displayed.,"STEP 1: 
+	
+	Navigate to the book catalog page.
+	
+	
+	Click on the Science Fiction category.
+	
+	
+	Observe the books displayed.",Category: Science Fiction,User is on the book catalog page with visible category options.,Basirat Zahra,04/04/2025 16:18:25,Basirat Zahra,04/10/2025 04:19:59,"Ensure that when a user selects a specific category, only books from that category are displayed.",,,
+556236,Verify that an appropriate message is shown if a selected category has no books,4m,P2 - Should Test,Functional,,,,Browse Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: A message should appear stating No books available in this category.,"STEP 1: 
+	
+	Navigate to the book catalog page.
+	
+	
+	Click on the Philosophy category.
+	
+	
+	Observe the system response.",Category: Philosophy (with no books),A book category exists with no books assigned to it.,Basirat Zahra,04/04/2025 16:18:40,Basirat Zahra,04/10/2025 04:20:55,Ensure that the system displays a relevant message when a selected category has no books available.,,,
+556237,Verify that users can filter books by popularity,5m,P1 - Must Test,Functional,,,,Browse Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Books should be reordered to show the most popular books first.,"STEP 1: 
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Sort by Popularity filter option.
+	
+	
+	Observe the order of the displayed books.",Filter: Popularity,User is on the book catalog page with access to filter options.,Basirat Zahra,04/04/2025 16:18:48,Basirat Zahra,04/10/2025 04:22:14,Ensure that users can apply the popularity filter to view the most popular books first.,,,
+556238,Verify that users can combine category and popularity filters,6m,P1 - Must Test,Functional,,,,Browse Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Only popular books from the Fantasy category should be displayed.,"STEP 1: 
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Fantasy category.
+	
+	
+	Apply the Sort by Popularity filter.
+	
+	
+	Observe the displayed results.","Category: Fantasy
+	
+	
+	Filter: Popularity",User is on the book catalog page with visible filter options.,Basirat Zahra,04/04/2025 16:19:07,Basirat Zahra,04/10/2025 04:24:29,Ensure that users can apply both category and popularity filters together to view relevant and popular books.,,,
+556239,Verify that user can search books by author’s name,5m,P1 - Must Test,Functional,,,,Search Books,Yes,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Books authored by J.K. Rowling should be displayed in the search results.,"STEP 1: 
+	
+	Navigate to the book search page or locate the search bar.
+	
+	
+	Enter J.K. Rowling into the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the search results.",Author Name: J.K. Rowling,User is on the book search page or has access to the search bar.,Basirat Zahra,04/04/2025 16:19:45,Basirat Zahra,04/10/2025 04:25:18,,,,
+556240,Verify that partial author name also returns correct results,5m,P2 - Should Test,Functional,,,,Search Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Books with authors whose names contain Rowl should be displayed.,"STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter Rowl into the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the displayed results.",Partial Author Name: Rowl,User is on the book search page with access to search functionality.,Basirat Zahra,04/04/2025 16:19:59,Basirat Zahra,04/10/2025 04:26:05,Ensure that entering a partial author name in the search returns all matching results.,,,
+556241,Verify that user can search for a book by its exact title,4m,P1 - Must Test,Functional,,,,Search Books,Yes,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The book titled To Kill a Mockingbird should be displayed in the search results.,"STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter To Kill a Mockingbird into the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the search results.",Book Title: To Kill a Mockingbird,User is on the book search page with access to the search bar.,Basirat Zahra,04/04/2025 16:20:05,Basirat Zahra,04/10/2025 04:27:06," Ensure that users can search for a book by entering its exact title and get accurate results.
+",,,
+556242,Verify that searching by ISBN returns the correct book edition,5m,P1 - Must Test,Functional,,,,Search Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The book with ISBN 9780061120084 should be displayed with the correct edition details.,"STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter 9780061120084 in the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the displayed result.",ISBN: 9780061120084,User is on the book search page with ISBN-based search enabled.,Basirat Zahra,04/04/2025 16:20:17,Basirat Zahra,04/10/2025 04:27:53,Ensure that users can search for a book using its ISBN and retrieve the correct edition.,,,
+556243,Verify that an invalid or random ISBN returns no results,4m,P1 - Must Test,Negative,,,,Search Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: No results should be displayed, and a message like No books found should be shown.","STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter 1234567890123 in the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the displayed results.",Invalid ISBN: 1234567890123,User is on the book search page with ISBN-based search enabled.,Basirat Zahra,04/04/2025 16:20:23,Basirat Zahra,04/10/2025 04:28:44,Ensure that searching with an invalid or random ISBN returns no results.,,,
+556244,Verify that keyword search returns relevant books,5m,P1 - Must Test,Functional,,,,Search Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: Books related to the keyword mystery should be displayed, including mystery genre books or books with mystery in their title or description.","STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter mystery into the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the displayed results.",Keyword: mystery,User is on the book search page with access to the search bar.,Basirat Zahra,04/04/2025 16:20:35,Basirat Zahra,04/10/2025 04:29:24,Ensure that searching using keywords returns relevant books based on the keywords provided.,,,
+556245,"Verify that search results display relevant info (title, author, rating, etc.)",5m,P1 - Must Test,Functional,,,,Search Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: Search results should display relevant information for each book, including the title, author, rating, and any other relevant details (e.g., price, genre).","STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter The Great Gatsby in the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the displayed search results.",Keyword or title: The Great Gatsby,User is on the book search page with search results available.,Basirat Zahra,04/04/2025 16:20:49,Basirat Zahra,04/10/2025 04:30:07," Ensure that search results display relevant information such as title, author, rating, and other book details.",,,
+556246,Verify that search works for both registered and guest users,5m,P1 - Must Test,Functional,,,,Search Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The search should return the same results for both registered and guest users, displaying relevant books based on the search query.","STEP 1: 
+	
+	Navigate to the book search page.
+	
+	
+	Enter fiction into the search field.
+	
+	
+	Click the search button or press enter.
+	
+	
+	Observe the search results for both registered and guest users.",Keyword: fiction,User is either logged in (registered user) or not logged in (guest user).,Basirat Zahra,04/04/2025 16:20:56,Basirat Zahra,04/10/2025 04:30:50,Ensure that both registered and guest users can perform book searches successfully.,,,
+556247,Verify that a registered user can filter books by price range,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Only books within the selected price range of Rs. 1000 - 2000 should be displayed.,"STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the price range filter and set it to  Rs. 1000 - 2000.
+	
+	
+	Observe the displayed results.",Price range: Rs. 1000 - 2000,User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:22:03,Basirat Zahra,04/10/2025 04:32:13,Ensure that a registered user can filter books by selecting a specific price range.,,,
+556248,Verify that a registered user can filter books by genre,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Only books belonging to the Science Fiction genre should be displayed.,"STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Science Fiction genre filter.
+	
+	
+	Observe the displayed results.",Genre: Science Fiction,User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:22:11,Basirat Zahra,04/10/2025 04:33:08," Ensure that a registered user can filter books by genre.",,,
+556249,Verify that a registered user can filter books by rating,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Only books with a rating of 4 stars and above should be displayed.,"STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the filter for books with a rating of 4 stars and above.
+	
+	
+	Observe the displayed results.",Rating: 4 stars and above,User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:22:22,Basirat Zahra,04/10/2025 04:33:48," Ensure that a registered user can filter books by their rating.",,,
+556250,Verify that a registered user can filter bestsellers,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Only bestseller books should be displayed in the search results.,"STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Bestsellers filter.
+	
+	
+	Observe the displayed results.",Filter: Bestsellers,User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:22:32,Basirat Zahra,04/10/2025 04:34:35," Ensure that a registered user can filter books to display only bestsellers.",,,
+556251,Verify that a registered user can apply multiple filters simultaneously,6m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: Books that meet all selected filters (Fiction genre, 4+ stars rating, and price range 600- 800) should be displayed.","STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Fiction genre filter.
+	
+	
+	Select the filter for books with a rating of 4 stars and above.
+	
+	
+	Set the price range filter to $10 - $50.
+	
+	
+	Observe the displayed results.","Genre: Fiction
+	
+	
+	Rating: 4 stars and above
+	
+	
+	Price Range: 600- 800",User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:22:44,Basirat Zahra,04/10/2025 04:35:46,"Ensure that a registered user can apply multiple filters (e.g., genre, rating, and price) at the same time and get relevant results.",,,
+556252,Verify that a registered user can sort books by price (low to high and high to low),5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Books should be displayed in the correct order based on the selected sorting option: first from low to high price and then from high to low price.,"STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Price: Low to High sorting option.
+	
+	
+	Observe the order of the books based on price.
+	
+	
+	Select the Price: High to Low sorting option.
+	
+	
+	Observe the order of the books based on price.",Sorting options: Price: Low to High and Price: High to Low,User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:23:25,Basirat Zahra,04/10/2025 04:36:43,"Ensure that a registered user can sort books by price in both low-to-high and high-to-low order.
+",,,
+556253,Verify that a registered user can sort books by rating,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Books should be displayed in the correct order based on the selected sorting option: first from highest to lowest rating and then from lowest to highest rating.,"STEP 1: 
+	
+	Log in as a registered user.
+	
+	
+	Navigate to the book catalog page.
+	
+	
+	Select the Rating: High to Low sorting option.
+	
+	
+	Observe the order of the books based on rating.
+	
+	
+	Select the Rating: Low to High sorting option.
+	
+	
+	Observe the order of the books based on rating.",Sorting options: Rating: High to Low and Rating: Low to High,User is logged in as a registered user and is on the book catalog page.,Basirat Zahra,04/04/2025 16:23:31,Basirat Zahra,04/10/2025 04:37:27,Ensure that a registered user can sort books by rating (from highest to lowest and vice versa).,,,
+556254,Verify that filter and sort functionalities are available for guest users,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: Guest users should be able to apply filters and sorting options, and the results should update accordingly based on the selected filter and sorting option.","STEP 1: 
+	
+	Navigate to the book catalog page as a guest user.
+	
+	
+	Apply a filter (e.g., Genre: Fiction).
+	
+	
+	Apply a price range filter (e.g., 100 - 500).
+	
+	
+	Select a sorting option (e.g., Price: Low to High).
+	
+	
+	Observe the results.
+	
+	
+	Change the sorting option to Rating: High to Low and observe the results.","Filters: Genre, Price range, Rating
+	
+	
+	Sorting options: Price: Low to High, Rating: High to Low",User is not logged in (guest user) and is on the book catalog page.,Basirat Zahra,04/04/2025 16:23:37,Basirat Zahra,04/10/2025 04:38:36,Ensure that guest users can use both filter and sort functionalities on the book catalog page.,,,
+556255,Verify that filters show no results if no book matches the criteria,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: An appropriate message such as No books match your filter criteria should be displayed if no books match the selected filters.,"STEP 1: 
+	
+	Navigate to the book catalog page.
+	
+	
+	Apply the Science Fiction genre filter.
+	
+	
+	Set the price range filter to $100 - $200.
+	
+	
+	Observe the displayed results.",Filter: Genre: Science Fiction and Price Range: 200 - 400 (assuming no books in this range),User is on the book catalog page with available filters.,Basirat Zahra,04/04/2025 16:23:47,Basirat Zahra,04/10/2025 04:39:30," Ensure that when no book matches the selected filter criteria, the system shows no results or an appropriate message.",,,
+556256,Verify that reset/clear filters removes applied filters,5m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The filters should be removed, and the book catalog should show all available books without any applied filters.","STEP 1: 
+	
+	Navigate to the book catalog page.
+	
+	
+	Apply filters (e.g., Genre: Fiction and Price Range: $10 - $50).
+	
+	
+	Click the reset or clear filters option.
+	
+	
+	Observe if the filters are removed and all books are displayed.","Applied filters: Genre = Fiction, Price Range = 700 - 900",User is on the book catalog page with applied filters.,Basirat Zahra,04/04/2025 16:23:54,Basirat Zahra,04/10/2025 04:40:18,"Ensure that the ""reset"" or ""clear filters"" option removes all applied filters and resets the book catalog page to its original state.",,,
+556257,Verify that filters and sorting options are retained during session (for logged-in),7m,P1 - Must Test,Functional,,,,Filter and Sort Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The previously applied filters and sorting options should still be active and reflect the correct book catalog results.,"STEP 1: 
+	
+	Log in as a registered user and navigate to the book catalog page.
+	
+	
+	Apply filters (e.g., Genre: Fiction and Price Range: 100 - 500).
+	
+	
+	Select a sorting option (e.g., Price: Low to High).
+	
+	
+	Refresh the page or navigate between pages.
+	
+	
+	Return to the book catalog page and observe if the filters and sorting options are retained.","Filters: Genre = Fiction, Price Range = 40 - 500
+	
+	
+	Sorting option: Price: Low to High",User is logged in and on the book catalog page.,Basirat Zahra,04/04/2025 16:24:13,Basirat Zahra,04/10/2025 04:41:21,"Ensure that filters and sorting options are retained during the session for logged-in users, even after refreshing the page or navigating between pages.
+",,,
+556258,Verify that a registered user can view book details,5m,P1 - Must Test,Functional,,,,View Book Details,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The book details (title, author, price, description, etc.) are displayed correctly for the selected book.","STEP 1: 
+
+
+	Log in to the application with a registered account.
+	Navigate to the book catalog.
+	Select a book from the catalog.
+	Click on the book to view details.","Registered user credentials
+	
+	
+	Book title: Sample Book","User is logged in with a registered account.
+	
+	
+	Book catalog is available with at least one book.",Basirat Zahra,04/04/2025 16:24:41,Basirat Zahra,04/10/2025 07:00:22,Ensure that a registered user can successfully view the details of a book from the catalog.,,,
+556259,Verify that a guest user can view book details without logging in,5m,P1 - Must Test,Functional,,,,View Book Details,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The book details (title, author, price, description, etc.) are displayed correctly without requiring login.","STEP 1: 
+	
+	Navigate to the book catalog as a guest user (not logged in).
+	
+	
+	Select a book from the catalog.
+	
+	
+	Click on the book to view details.",,"Guest user is not logged in.
+	
+	
+	Book catalog is available with at least one book.",Basirat Zahra,04/04/2025 16:24:52,Basirat Zahra,04/10/2025 07:01:13,"Ensure that a guest user can view the details of a book without needing to log in.
+
+",,,
+556260,Verify that book description is displayed correctly,5m,P1 - Must Test,Functional,,,,View Book Details,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: -The book description is displayed correctly and matches the description stored in the database.,"STEP 1: 
+	
+	Navigate to the book details page.
+	
+	
+	Locate the description section of the book.",Book with a description: A thrilling mystery novel that keeps you on the edge of your seat.,"User is on the book details page.
+	
+	
+	Book has a description.",Basirat Zahra,04/04/2025 16:24:57,Basirat Zahra,04/10/2025 07:02:46,"Ensure that the book description is displayed correctly on the book details page.
+
+",,,
+556261,Verify that book price is displayed,5m,P1 - Must Test,Functional,,,,View Book Details,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The book price is displayed correctly and matches the price stored in the database.,"STEP 1: 
+	
+	Navigate to the book details page.
+	
+	
+	Locate the price section of the book.",Book with price: Rs. 800,"User is on the book details page.
+	
+	
+	Book has a price set.",Basirat Zahra,04/04/2025 16:25:04,Basirat Zahra,04/10/2025 07:03:40,"Ensure that the price of the book is correctly displayed on the book details page.
+
+",,,
+556262,Verify that book availability status is displayed,5m,P1 - Must Test,Functional,,,,View Book Details,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The book availability status (e.g., In Stock or Out of Stock) is displayed correctly.","STEP 1: 
+	
+	Navigate to the book details page.
+	
+	
+	Locate the availability status section of the book.",Book with availability status: In Stock,"User is on the book details page.
+	
+	
+	Book has an availability status set (e.g., in stock, out of stock).",Basirat Zahra,04/04/2025 16:25:10,Basirat Zahra,04/10/2025 07:05:04,"Ensure that the availability status of the book is displayed on the book details page.
+
+",,,
+556263,Verify that user can view reviews and ratings of a book,5m,P1 - Must Test,Functional,,,,View Book Details,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The reviews and average rating for the book are displayed correctly, showing the review text and the star rating for each review.","STEP 1: 
+	
+	Navigate to the book details page.
+	
+	
+	Locate the reviews and ratings section.
+	
+	
+	View the displayed reviews and average rating.","Book with reviews and ratings: 4.5 stars, 15 reviews","User is on the book details page.
+	
+	
+	Book has reviews and ratings",Basirat Zahra,04/04/2025 16:25:16,Basirat Zahra,04/10/2025 07:06:13,"Ensure that the user can view the reviews and ratings for a book on the book details page.
+
+",,,
+556264,Verify that star rating component is visible,0m,P1 - Must Test,Functional,,,,View Book Details,No,No,No,No,No,No,No,No,No,No,,,,,Basirat Zahra,04/04/2025 16:25:23,Basirat Zahra,04/04/2025 16:25:23,,,,
+556265,Verify that images of the book (cover/front/back) are displayed,0m,P1 - Must Test,Functional,,,,View Book Details,No,No,No,No,No,No,No,No,No,No,,,,,Basirat Zahra,04/04/2025 16:25:35,Basirat Zahra,04/04/2025 16:25:35,,,,
+556266,Verify redirection when user clicks “Buy Now” or “Add to Cart” from detail page,0m,P1 - Must Test,Functional,,,,View Book Details,No,No,No,No,No,No,No,No,No,No,,,,,Basirat Zahra,04/04/2025 16:25:44,Basirat Zahra,04/04/2025 16:25:44,,,,
+556267,Verify that a registered user sees recommended books based on search/purchase,7m,P2 - Should Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Books related to Science Fiction are displayed as recommendations based on the users search or purchase history.,"STEP 1: 
+	
+	Log in to the application with a registered account.
+	
+	
+	Search for a book or make a purchase related to Science Fiction.
+	
+	
+	Navigate to the recommended books section.",Search/Purchase History: Books related to Science Fiction,"User is logged in with a registered account.
+	User has performed at least one search or purchase.",Basirat Zahra,04/04/2025 16:26:17,Basirat Zahra,04/10/2025 07:07:28,"Ensure that the system displays recommended books for a registered user based on their search history or previous purchases.
+
+",,,
+556268,Verify that recommended books update after new searches or purchases,0m,P2 - Should Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The recommended books section updates to display books related to Fantasy based on the new search or purchase.,"STEP 1: 
+	
+	Log in to the application with a registered account.
+	
+	
+	Perform a search or purchase related to Science Fiction.
+	
+	
+	View the recommended books.
+	
+	
+	Perform a new search or purchase related to Fantasy.
+	
+	
+	Navigate to the recommended books section again.","Previous Search/Purchase: Books related to Science Fiction
+	
+	
+	New Search/Purchase: Books related to Fantasy","User is logged in with a registered account.
+	
+	
+	User has already received book recommendations.",Basirat Zahra,04/04/2025 16:26:24,Basirat Zahra,04/10/2025 07:08:49,"Ensure that the system updates the recommended books for a registered user after they perform a new search or purchase.
+
+",,,
+556269,Verify that guest users can view trending/popular books without login,5m,P1 - Must Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The trending or popular books are displayed correctly for the guest user without requiring login.,"STEP 1: 
+	
+	Navigate to the trending or popular books section as a guest user (not logged in).
+	
+	
+	View the displayed list of trending or popular books.",,"Guest user is not logged in.
+	
+	
+	A list of trending or popular books is available.",Basirat Zahra,04/04/2025 16:26:30,Basirat Zahra,04/10/2025 07:10:35,"Ensure that guest users can view trending or popular books without the need to log in.
+
+",,,
+556270,Verify that popular books list is visible to both registered and guest users,5m,P1 - Must Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The list of popular books is displayed correctly for both registered and guest users.,"STEP 1: 
+	
+	Navigate to the popular books section as a registered user.
+	
+	
+	View the displayed list of popular books.
+	
+	
+	Log out to become a guest user.
+	
+	
+	Navigate to the popular books section again as a guest user.
+	
+	
+	View the displayed list of popular books.",,"The list of popular books is available.
+	
+	
+	Users are either registered or guest.",Basirat Zahra,04/04/2025 16:26:38,Basirat Zahra,04/10/2025 07:11:33,"Ensure that both registered and guest users can view the list of popular books.
+
+",,,
+556271,Verify that recommended section is hidden from guest users,6m,P1 - Must Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The recommended books section is not visible to guest users.,"STEP 1: 
+	
+	Navigate to the application as a guest user (not logged in).
+	
+	
+	Check for the visibility of the recommended books section.","Guest user is not logged in.
+	
+	
+	The recommended books section exists for registered users.",,Basirat Zahra,04/04/2025 16:26:43,Basirat Zahra,04/10/2025 07:12:21,"Ensure that the recommended books section is hidden from guest users.
+
+",,,
+556272,Verify that each recommended/popular book item shows essential details,7m,P1 - Must Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: Each recommended or popular book item shows the title, author, price, and rating clearly.","STEP 1: 
+	
+	Navigate to the recommended or popular books section.
+	
+	
+	Check each book item for essential details: title, author, price, and rating.",,"User is logged in (or guest).
+	
+	
+	The recommended or popular books section is available.",Basirat Zahra,04/04/2025 16:27:00,Basirat Zahra,04/10/2025 07:13:12,"Ensure that each recommended or popular book item displays the essential details such as title, author, price, and rating.
+
+",,,
+556273,Verify that clicking on a recommended/popular book redirects to book detail page,5m,P1 - Must Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: -Clicking on a recommended or popular book redirects the user to the corresponding book detail page.,"STEP 1: 
+	
+	Navigate to the recommended or popular books section.
+	
+	
+	Click on a book item.
+	
+	
+	Check if the user is redirected to the book detail page.",,"User is logged in (or guest).
+	
+	
+	The recommended or popular books section is available.",Basirat Zahra,04/04/2025 16:27:06,Basirat Zahra,04/10/2025 07:14:01,"Ensure that clicking on a recommended or popular book redirects the user to the book's detail page.
+
+",,,
+556274,Verify that popular books section updates dynamically based on overall ratings,7m,P2 - Should Test,Functional,,,,Recommendations and Popular Books,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The popular books section updates to display books with the highest overall ratings.,"STEP 1: 
+	
+	Navigate to the popular books section.
+	
+	
+	Verify the books currently displayed.
+	
+	
+	Update the ratings of one or more books to reflect changes (e.g., increase Book 2 rating to 4.9).
+	
+	
+	Refresh or navigate to the popular books section again.","Book 1: Rating = 4.5
+	Book 2: Rating = 4.8","User is logged in (or guest).
+	
+	
+	The popular books section is available and can be updated based on ratings.",Basirat Zahra,04/04/2025 16:27:11,Basirat Zahra,04/10/2025 07:15:23,Ensure that the popular books section updates dynamically to reflect books with the highest overall ratings.,,,
