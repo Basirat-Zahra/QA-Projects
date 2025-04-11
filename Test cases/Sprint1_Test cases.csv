@@ -1,0 +1,619 @@
+Id,Title,Estimate,Priority,Type,Jira Refs,Github Refs,Azure Refs,Section,Smoke,Regression,Reviewed by QA Lead,Reviewed by QA Manager,Reviewed by PM,To Automate,Automated,Module,To be Moved,Disabled,Steps (Expected),Steps (Steps),Test Data,Preconditions,Created By,Created On,Updated By,Updated On,Description,Bdd_gherkin,Cucumber_tags,Milestone
+556222,Verify that the user can access the profile edit page,5m,P1 - Must Test,Functional,,,,User Profile Management,Yes,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The profile edit page is displayed with current user details.,"STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile page.
+	
+	
+	Click on the Edit Profile button.",,"User is logged in.
+	
+	
+	Profile edit page is accessible.",Basirat Zahra,04/04/2025 13:53:44,Basirat Zahra,04/08/2025 13:32:53,"Ensure that the user can successfully navigate to the profile edit page after logging in.
+
+",,,
+556223,Verify that the user can update their username successfully,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	The username is updated successfully.
+	
+	
+	The updated username is displayed on the profile page.","STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Enter a new username (newusername) in the username field.
+	
+	
+	Click on the Save or Update button.","Old Username: oldusername
+	
+	
+	New Username: newusername","User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:53:59,Basirat Zahra,04/08/2025 13:34:03,"Ensure that the user can successfully update their username from the profile edit page.
+
+",,,
+556224,Verify that the user can update their email with a valid email format,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	The email is updated successfully.
+	
+	
+	The updated email is displayed on the profile page.","STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Enter a new valid email (newemail@example.com) in the email field.
+	
+	
+	Click on the Save or Update button.","Old Email: oldemail@example.com
+	
+	
+	New Email: newemail@example.com","User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:54:05,Basirat Zahra,04/08/2025 13:35:01,"Ensure that the user can successfully update their email with a valid email format on the profile edit page.
+
+",,,
+556225,Verify that the system shows error on invalid email format,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: Please enter a valid email address.
+	
+	
+	The email is not updated.","STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Enter an invalid email (invalidemail.com) in the email field.
+	
+	
+	Click on the Save or Update button.","Invalid Email: invalidemail.com, user@, user@domain","User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:54:12,Basirat Zahra,04/08/2025 13:36:19,"Ensure that the system displays an error when the user tries to update their email with an invalid email format.
+
+",,,
+556226,Verify that the user can update their phone number with valid digits,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The phone number is updated successfully and displayed correctly on the profile page.,"STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Enter a new valid phone number (9876543210) in the phone number field.
+	
+	
+	Click on the Save or Update button.","Old Phone Number: 1234567890
+	
+	
+	New Phone Number: 9876543210","User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:54:17,Basirat Zahra,04/08/2025 13:37:28,"Ensure that the user can successfully update their phone number with a valid phone number format on the profile edit page.
+
+",,,
+556227,Verify that the system shows error when phone number is invalid,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: An error message is displayed: Please enter a valid phone number. The phone number is not updated.,"STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Enter an invalid phone number (12345) in the phone number field.
+	
+	
+	Click on the Save or Update button.","Invalid Phone Numbers: 12345, abcdefghij, 98765abc","User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:54:26,Basirat Zahra,04/08/2025 13:38:38,"Ensure that the system displays an error when the user tries to update their phone number with an invalid phone number format.
+
+",,,
+556228,Verify that the user can update their address successfully,5m,P2 - Should Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	The address is updated successfully and displayed correctly on the profile page.","STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Enter a new valid address (456 New Ave, City, Country) in the address field.
+	
+	
+	Click on the Save or Update button.","Old Address: 123 Old St, City, Country
+	
+	
+	New Address: 456 New Ave, City, Country","User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:54:36,Basirat Zahra,04/08/2025 13:39:56,"Ensure that the user can successfully update their address on the profile edit page.
+
+",,,
+556229,Verify that leaving required fields blank shows validation error,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: A validation error is displayed for each required field left blank, indicating that these fields are mandatory.","STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Leave one or more required fields (e.g., Username, Email, Phone Number) blank.
+	
+	
+	Click on the Save or Update button.",empty feilds,"User is logged in.
+	
+	
+	User is on the profile edit page.",Basirat Zahra,04/04/2025 13:54:46,Basirat Zahra,04/08/2025 13:41:03,"Ensure that the system shows a validation error when required fields are left blank.
+
+",,,
+556230,Verify that changes are saved and reflected after reloading profile page,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: The changes made to the profile are saved and displayed correctly after the page reloads.,"STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Make changes to any profile field (e.g., update username, email, address).
+	
+	
+	Click on the Save or Update button.
+	
+	
+	Reload the profile page.","New Username: newuser123
+	
+	
+	New Email: newuser123@example.com","User is logged in.
+	
+	
+	User has made changes to their profile (e.g., username, email, address).",Basirat Zahra,04/04/2025 13:54:52,Basirat Zahra,04/08/2025 13:42:28,"Ensure that any changes made on the profile edit page are saved and correctly reflected after reloading the profile page.
+
+",,,
+556231,Verify that canceling changes does not update the profile,5m,P1 - Must Test,Functional,,,,User Profile Management,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	The profile is not updated, and the original values (e.g., olduser123) are displayed.","STEP 1: 
+	
+	Log in with valid credentials.
+	
+	
+	Navigate to the profile edit page.
+	
+	
+	Change a field (e.g., username) to a new value (newuser123).
+	
+	
+	Click on the Cancel button to cancel the changes.
+	
+	
+	Navigate back to the profile page.","Old Username: olduser123
+	
+	
+	New Username: newuser123","User is logged in.
+	
+	
+	User is on the profile edit page with unsaved changes.",Basirat Zahra,04/04/2025 13:54:58,Basirat Zahra,04/08/2025 13:46:27,"Ensure that canceling the changes on the profile edit page does not update the profile.
+
+",,,
+556232,Verify that unauthorized user cannot access profile edit page,5m,P1 - Must Test,Functional,,,,User Profile Management,No,No,No,No,No,Yes,No,No,No,No,"RESULT 1: The system redirects the user to the login page or shows an error message, indicating that they need to log in to access the profile edit page.","STEP 1: 
+	
+	Ensure the user is not logged in.
+	
+	
+	Try to navigate to the profile edit page (e.g., by directly entering the URL).",,User is not logged in.,Basirat Zahra,04/04/2025 13:55:03,Basirat Zahra,04/08/2025 13:49:00,"Ensure that an unauthorized user (not logged in) cannot access the profile edit page.
+
+",,,
+556168,Verify that a user can successfuly register with valid email and password,8m,P1 - Must Test,Functional,,,,Register user,Yes,No,No,No,No,No,No,No,No,No,RESULT 1: User is successfully registered,"STEP 1: 1. User opens user registration page
+
+2. User enters a valid email
+
+3. User enters a valid password
+
+4. User clicks on register/sign up button","email: test123@gmail.com
+
+password: Tester@1234",The registration page is accessible,Basirat Zahra,04/04/2025 07:26:34,Basirat Zahra,04/04/2025 07:32:30,,,,
+556169,Verify that registration fails with invalid email format,7m,P1 - Must Test,Functional,,,,Register user,Yes,No,No,No,No,No,No,Yes,No,No,RESULT 1: The system should display a message saying Invlaid email format,"STEP 1: 1. Open registration page
+
+2. Enter an invalid format email address
+
+3. Enter a passwrod
+
+4. Click on Signup/Register button",email: test@123.acom,The registeration page is accessible,Basirat Zahra,04/04/2025 07:33:31,Basirat Zahra,04/04/2025 07:37:14,A user tries to register using a bad email format,,,
+556170,Verify that the registration fails when the password does not meet security reuirements,10m,P1 - Must Test,Functional,,,,Register user,Yes,No,No,No,No,No,No,No,No,No,RESULT 1: The system should inform user that the password does not meek security requirements.,"STEP 1: 1. Open the registration page
+
+2. Enter a valid email address
+
+3. Enter a very weak pasword
+
+4. Clic on Register button","email: test123@gmail.com
+
+password: 12345",The registration page is accessible,Basirat Zahra,04/04/2025 07:38:00,Basirat Zahra,04/04/2025 07:45:28,,,,
+556171,Verify that registration fails when an email is already registered,7m,P1 - Must Test,Functional,,,,Register user,Yes,No,No,No,No,Yes,No,Yes,No,No,RESULT 1: The system should display an error message that the email is already in use.,"STEP 1: 1. Open registration page
+
+2. Enter an already registered email address
+
+3. Enter a valid password
+
+4. Click on Signup button",email: exists12@gmail.com,The registration pae is accessible,Basirat Zahra,04/04/2025 07:38:31,Basirat Zahra,04/04/2025 07:48:09,,,,
+556172,Verify that email and password fields cannot be left blank,6m,P1 - Must Test,Functional,,,,Register user,Yes,No,No,No,No,Yes,No,No,No,No,RESULT 1: The system should display an error message that the mandatory field can not be left blank,"STEP 1: 1. Open registration page
+
+2. Leave the email field blank
+
+3. Click Sign up button",,The registration page is accessiblr,Basirat Zahra,04/04/2025 07:38:56,Basirat Zahra,04/04/2025 07:50:03,,,,
+556173,Verify that a verification email is sent after successful registration,10m,P1 - Must Test,Functional,,,,Email Verification,Yes,No,No,No,No,Yes,No,No,No,No,RESULT 1: An email verification link should be recieved,"STEP 1: 1. Register with a valid email and password
+
+2. Open you email inbox
+
+3. Check for a verification link",,A new user has registered successfully,Basirat Zahra,04/04/2025 07:51:11,Basirat Zahra,04/04/2025 07:57:51,Checking if the verification link is recieved by the newly registered user,,,
+556174,Verify that the email contains a verification link,8m,P1 - Must Test,Functional,,,,Email Verification,Yes,No,No,No,No,Yes,No,No,No,No,RESULT 1: The email should have a clickable verification link,"STEP 1: 1. Register using a valid email and password
+
+2 . Open verification ink in the inbox
+
+3. Click on the link",,A new user has registered successfully,Basirat Zahra,04/04/2025 07:51:26,Basirat Zahra,04/04/2025 08:00:13,Checking if the verification link is clickable or not,,,
+556176,Verify that clicking the verification link activates the account,10m,P1 - Must Test,Functional,,,,Email Verification,Yes,No,No,No,No,Yes,No,No,No,No,RESULT 1: The account should be activated and user should be redirected to login page,"STEP 1: 1. Register using a valid email and password
+
+2. Clcik on verification link",,A new user registers successfully,Basirat Zahra,04/04/2025 07:52:31,Basirat Zahra,04/04/2025 08:02:03,,,,
+556177,Verify that trying to log in before verifying the email fails,8m,P1 - Must Test,Functional,,,,Email Verification,Yes,No,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	The user should not be logged in. and an error message should appear: Please verify your email before logging in. or similar.","STEP 1: 
+	
+	Navigate to the login page.
+	
+	
+	Enter the registered email (testuser@example.com).
+	
+	
+	Enter the password (Test@1234).
+	
+	
+	Click on the Login button.
+	
+	
+	Observe the system response.","Email: testuser@example.com
+	
+	
+	Password: Test@1234
+	
+	
+	Email Status: Not Verified","The user has successfully registered using a valid email and password.
+	
+	
+	The user has not clicked the email verification link sent after registration.
+	
+	
+	Email verification feature is enabled in the system.",Basirat Zahra,04/04/2025 07:52:40,Basirat Zahra,04/08/2025 07:54:27,Ensure that a user cannot log in to the application without first verifying their email after the registration process.,,,
+556178,Verify that an expired verification link does not activate the account,0m,P2 - Should Test,Functional,,,,Email Verification,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: The user should see an error message stating that the link has expired, such as: This verification link has expired. Please request a new verification link. The account should not be activated, and the user should be prompted to request a new verification email","STEP 1: 1. Send the registration email with the verification link to the users email address (testuser@example.com).
+
+2. Wait for the verification link to expire (e.g., wait for 24 hours).
+
+3. After the expiration period, click on the verification link from the email.
+
+4. Observe the system response.","Email: testuser@example.com
+	
+	
+	Verification Link Expiry Time: 24 hours
+	
+	
+	Link Status: Expired (due to time exceeding the expiry duration)","The user has registered and received an email verification link.
+	
+	
+	The user does not activate the account within the allowed time frame, causing the link to expire.
+	
+	
+	The email verification system is configured to expire links after a specific time period (e.g., 24 hours).",Basirat Zahra,04/04/2025 07:52:49,Basirat Zahra,04/08/2025 08:12:21,"Ensure that if a user clicks on an expired email verification link, their account will not be activated, and an appropriate error message is displayed.",,,
+556204,Successful login with valid credentials,5m,P1 - Must Test,Functional,,,,User Login and Logout,Yes,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: User is successfully logged in and redirected to the dashboard or homepage.,"STEP 1: 1. Navigate to the login page.
+
+2. Enter validuser@example.com in the email field.
+
+3. Enter ValidPass123 in the password field.
+
+4. Click on the Login button.","Email: validuser@example.com
+
+Password: ValidPass123",User account already exists with verified email.,Basirat Zahra,04/04/2025 13:43:33,Basirat Zahra,04/08/2025 13:01:23,Ensure that a registered user can successfully log in using valid credentials.,,,
+556205,Verify that login fails with incorrect password,5m,P1 - Must Test,Functional,,,,User Login and Logout,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: Login attempt fails and error message displayed: Incorrect password or similar.,"STEP 1: 
+	
+	Navigate to the login page.
+	
+	
+	Enter validuser@example.com in the email field.
+	
+	
+	Enter WrongPass123 in the password field.
+	
+	
+	Click on the Login button.","Email: validuser@example.com
+
+Password: WrongPass123",User account exists with verified email.,Basirat Zahra,04/04/2025 13:43:50,Basirat Zahra,04/08/2025 13:05:47,"Ensure that a user cannot log in with a valid email and incorrect password.
+
+",,,
+556206,Verify that login fails with unregistered email,5m,P1 - Must Test,Functional,,,,User Login and Logout,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	Login attempt fails.
+	
+	
+	Error message displayed: Email not found or similar.","STEP 1: 
+	
+	Navigate to the login page.
+	
+	
+	Enter unregistered@example.com in the email field.
+	
+	
+	Enter AnyPassword123 in the password field.
+	
+	Click on the Login button.","Email: unregistered@example.com
+
+Password: AnyPassword123",The entered email does not exist in the system.,Basirat Zahra,04/04/2025 13:43:57,Basirat Zahra,04/08/2025 13:07:27,"Ensure that login fails when a user tries to log in using an email that is not registered in the system.
+
+",,,
+556207,Verify that login fails with empty fields,3m,P1 - Must Test,Functional,,,,User Login and Logout,Yes,Yes,No,No,No,Yes,No,Yes,No,No,"RESULT 1: 
+	
+	Login attempt is blocked.
+	
+	
+	Appropriate validation messages are displayed (e.g., Email is required, Password is required).","STEP 1: 
+	
+	Navigate to the login page.
+	
+	
+	Leave the email and password fields empty.
+	
+	
+	Click on the Login button.","Email: (empty)
+	
+	
+	Password: (empty)",Login page is accessible.,Basirat Zahra,04/04/2025 13:44:04,Basirat Zahra,04/08/2025 13:08:47,"Ensure that login is not allowed when email and/or password fields are left empty.
+
+",,,
+556208," Verify that email format validation is enforced",3m,P1 - Must Test,Functional,,,,User Login and Logout,Yes,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	Login is not attempted.
+	
+	
+	Validation error message is shown: Enter a valid email address.","STEP 1: 
+	
+	Navigate to the login page.
+	
+	
+	Enter an invalid email format in the email field.
+	
+	
+	Enter any valid password.
+	
+	
+	Click on the Login button.","Email: invalidemail.com, user@, user@domain
+	
+	
+	Password: Test@1234",Login page is accessible.,Basirat Zahra,04/04/2025 13:44:24,Basirat Zahra,04/08/2025 13:10:01,Ensure that the system validates the email format and prevents login or submission with invalid email formats.,,,
+556209,"Verify that ""Remember Me"" functionality retains login",7m,P2 - Should Test,Functional,,,,User Login and Logout,No,Yes,No,No,No,Yes,No,No,No,No,RESULT 1: User remains logged in without needing to re-enter credentials.,"STEP 1: 
+	
+	Navigate to the login page.
+	
+
+
+
+	
+	Enter valid credentials.
+	
+	
+	Check the Remember Me checkbox.
+	
+	
+	Click Login.
+	
+	
+	Close the browser without logging out.
+	
+	
+	Reopen the browser and navigate to the application.","Email: validuser@example.com
+
+Password: ValidPass123","User has a valid, verified account.
+	
+	
+	Remember Me option is available on the login page.",Basirat Zahra,04/04/2025 13:44:34,Basirat Zahra,04/08/2025 13:11:11,"Ensure that selecting the ""Remember Me"" checkbox keeps the user logged in even after closing and reopening the browser.
+
+",,,
+556210,Verify that user can successfully log out,3m,P1 - Must Test,Functional,,,,User Login and Logout,Yes,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	User is logged out successfully.
+	
+	
+	Redirected to the login page.
+	
+	
+	User session/token is cleared.","STEP 1: 
+	
+	Log in to the application with valid credentials.
+	
+	
+	Click on the Logout button or link.",,User is logged in to the application.,Basirat Zahra,04/04/2025 13:44:46,Basirat Zahra,04/08/2025 13:15:53,"Ensure that clicking the logout button successfully ends the user session and redirects to the login page.
+
+",,,
+556211,Verify that accessing the dashboard after logout fails,5m,P1 - Must Test,Functional,,,,User Login and Logout,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	User is redirected to the login page.
+	
+	
+	Access to the dashboard is denied.","STEP 1: 
+	
+	Log out from the application.
+	
+	
+	Try to access the dashboard URL directly (e.g., /dashboard).",,User is logged out.,Basirat Zahra,04/04/2025 13:44:52,Basirat Zahra,04/08/2025 13:17:07,"Ensure that users are unable to access the dashboard after logging out.
+
+",,,
+556212,Verify that logout works on shared devices,7m,P2 - Should Test,Functional,,,,User Login and Logout,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	User is logged out and cannot access any authenticated pages.
+	
+	
+	User is redirected to the login page.","STEP 1: 
+	
+	Log in to the application on a shared device.
+	
+	
+	Click on the Logout button.
+	
+	
+	Close the browser.
+	
+	
+	Reopen the browser and navigate to the application.",,User is logged in on a shared device.,Basirat Zahra,04/04/2025 13:45:04,Basirat Zahra,04/08/2025 13:18:24,"Ensure that logging out on a shared device fully ends the session and prevents unauthorized access.
+
+",,,
+556213,Verify that user can request a password reset link with a registered email,5m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	A password reset link is sent to the provided email.
+	
+	
+	User is informed that the reset link has been sent (e.g., via a success message).","STEP 1: 
+	
+	Navigate to the password reset page.
+	
+	
+	Enter registereduser@example.com in the email field.
+	
+	
+	Click on the Request Reset Link button.",Email: registereduser@example.com,User account exists with a verified email.,Basirat Zahra,04/04/2025 13:46:08,Basirat Zahra,04/08/2025 13:19:32,"Ensure that a user can successfully request a password reset link by providing a registered email.
+
+",,,
+556214,Verify that user cannot request a password reset link with an unregistered email,5m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: Email not found in the system.
+	
+	
+	No reset link is sent.","STEP 1: 
+	
+	Navigate to the password reset page.
+	
+	
+	Enter unregistereduser@example.com in the email field.
+	
+	
+	Click on the Request Reset Link button.",Email: unregistereduser@example.com,The email provided is not registered in the system.,Basirat Zahra,04/04/2025 13:46:23,Basirat Zahra,04/08/2025 13:20:41,"Ensure that a user cannot request a password reset link with an unregistered email address.
+
+",,,
+556215,Verify that user cannot request a password reset link with an invalid email format,5m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: Enter a valid email address.
+	
+	
+	No reset link is sent.","STEP 1: 
+	
+	Navigate to the password reset page.
+	
+	
+	Enter an invalid email format in the email field.
+	
+	
+	Click on the Request Reset Link button.","Email: invalidemail.com, user@, user@domain",Password reset page is accessible.,Basirat Zahra,04/04/2025 13:46:34,Basirat Zahra,04/08/2025 13:21:39,"Ensure that the system validates the email format when requesting a password reset link and prevents submission of an invalid email.
+
+",,,
+556216,Verify that user cannot request a password reset link with an empty email field,3m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: Email is required.
+	
+	
+	No reset link is sent.","STEP 1: 
+	
+	Navigate to the password reset page.
+	
+	
+	Leave the email field empty.
+	
+	
+	Click on the Request Reset Link button.",Empty fields,Password reset page is accessible.,Basirat Zahra,04/04/2025 13:46:40,Basirat Zahra,04/08/2025 13:23:28,"Ensure that the system prevents the user from submitting the password reset request when the email field is left empty.
+
+",,,
+556217,Verify that user can reset password with a valid reset link,7m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	The password is successfully reset.
+	
+	
+	User is redirected to the login page with a success message indicating the password has been changed.","STEP 1: 
+	
+	Click on the password reset link received in the email.
+	
+	
+	Enter the new password (NewPass123) in the provided field.
+	
+	
+	Confirm the new password.
+	
+	
+	Click on the Reset Password button.","Email: registereduser@example.com
+
+New Password: NewPass123","User has received a valid password reset link via email.
+	
+	
+	The reset link is still valid (not expired).",Basirat Zahra,04/04/2025 13:51:36,Basirat Zahra,04/08/2025 13:25:01,"Ensure that a user can successfully reset their password using a valid password reset link.
+
+",,,
+556218,Verify that password and confirm password fields mismatch,5m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: Passwords do not match.
+	
+	
+	User is prompted to correct the mismatch before proceeding.","STEP 1: 
+	
+	Click on the password reset link received in the email.
+	
+	
+	Enter NewPass123 in the password field.
+	
+	
+	Enter NewPass456 in the confirm password field.
+	
+	
+	Click on the Reset Password button.","New Password: NewPass123
+	
+	
+	Confirm Password: NewPass456",User is on the password reset page with valid reset link.,Basirat Zahra,04/04/2025 13:51:52,Basirat Zahra,04/08/2025 13:26:17,"Ensure that the system displays an error when the password and confirm password fields do not match during password reset.
+
+",​​​​​​,,
+556219,Verify that password reset fails with an expired/invalid link,7m,P1 - Must Test,Functional,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: The reset link has expired or is invalid.
+	
+	
+	User is not able to reset the password.","STEP 1: 
+	
+	Click on the expired/invalid password reset link received in the email.
+	
+	
+	Enter a new password in the password field.
+	
+	
+	Enter the same password in the confirm password field.
+	
+	
+	Click on the Reset Password button.",An Expired/Invalid Reset Link is provided in the email,The reset link has expired or is invalid.,Basirat Zahra,04/04/2025 13:51:59,Basirat Zahra,04/08/2025 13:27:26,"Ensure that a user cannot reset their password using an expired or invalid reset link.
+
+",,,
+556220,Verify that user cannot set a weak password,5m,P1 - Must Test,Negative,,,,Password reset and recovery,No,Yes,No,No,No,Yes,No,No,No,No,"RESULT 1: 
+	
+	An error message is displayed: Password is too weak. Please use a stronger password.
+	
+	
+	User is prompted to choose a stronger password.","STEP 1: 
+	
+	Enter 12345 in the password field.
+	
+	
+	Enter the same 12345 in the confirm password field.
+	
+	
+	Click on the Set Password or Reset Password button.",Weak Password: 12345,User is on the password reset or account creation page.,Basirat Zahra,04/04/2025 13:52:07,Basirat Zahra,04/08/2025 13:29:44,Ensure that the system enforces a strong password policy and prevents users from setting a weak password.,,,
