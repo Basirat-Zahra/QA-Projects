@@ -56,10 +56,6 @@ Id,Title,Estimate,Priority,Type,Jira Refs,Github Refs,Azure Refs,Section,Smoke,R
 2. Verify format: 'By [Username] on [Date]'
 3. Check username links to profile
 4. Verify date format matches locale","Username: 'BookLover42', Date: '04/07/2025'",Review exists,Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,Tests review metadata display standards,,,
-557314,Verify filtering by rating works (e.g.,3m,P2 - Should Test,Other,functional,,,Home,No,No,Yes,No,No,No,Yes,No,No,No,No,Only 5-star reviews display,"1. Select '5 Stars' filter
-2. Verify only 5-star reviews show
-3. Check count matches (e.g., 'Showing 8 of 15 reviews')
-4. Test other rating filters","Book with mixed ratings (3x5-star, 2x1-star)",Basirat Zahra,04/10/2025 10:46:41,Basirat Zahra,04/10/2025 10:46:41,04/07/2025 06:29:44,Tests review filtering functionality,,
 557316,Verify that a registered user can report a review,5m,P1 - Must Test,Functional,,,,Report Inappropriate Reviews,No,Yes,No,No,No,Yes,No,No,No,No,Review is flagged in moderation queue,"1. Find offensive review
 2. Click 'Report'
 3. Select 'Offensive Content'
