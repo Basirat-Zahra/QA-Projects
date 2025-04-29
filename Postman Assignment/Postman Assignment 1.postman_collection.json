@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "7e9388eb-67e1-40b7-8f90-cfcb22195662",
+		"name": "Postman Assignment 1",
+		"description": "This postman collection is created for testing the [restful-api.dev](https://api.restful-api.dev/) endpoints.  \n  \nIt covers GET, POST, PUT, PATCH, DELETE methods with random data generation, Chai assertions, and variable handling.  \n  \nPre-request scripts, test scripts, and API chaining are also implemented as per assignment requirements.EndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39095284"
+	},
+	"item": [
+		{
+			"name": "Post Request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// genearte random values\r",
+							"const randomName = \"My Own Phone \" + Math.floor(Math.random() * 10000);\r",
+							"const randomYear = Math.floor(Math.random() * 5) + 2018; // random year between 2018–2022\r",
+							"const randomPrice = (Math.random() * 1000 + 1000).toFixed(2); // Prie between 1000–2000\r",
+							"const cpuModels = [\"Intel Core i5\", \"Intel Core i7\", \"Intel Core i9\", \"M1 Pro\", \"M2\"];\r",
+							"const randomCPU = cpuModels[Math.floor(Math.random() * cpuModels.length)];\r",
+							"const hardDiskSizes = [\"256 GB\", \"512 GB\", \"1 TB\", \"2 TB\"];\r",
+							"const randomDisk = hardDiskSizes[Math.floor(Math.random() * hardDiskSizes.length)];\r",
+							"\r",
+							"// Setting thee variables\r",
+							"pm.variables.set(\"randomName\", randomName);\r",
+							"pm.variables.set(\"randomYear\", randomYear);\r",
+							"pm.variables.set(\"randomPrice\", randomPrice);\r",
+							"pm.variables.set(\"randomCPU\", randomCPU);\r",
+							"pm.variables.set(\"randomDisk\", randomDisk);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"{{randomName}}\",\r\n   \"data\": {\r\n      \"year\": {{randomYear}},\r\n      \"price\": {{randomPrice}},\r\n      \"CPU model\": \"{{randomCPU}}\",\r\n      \"Hard disk size\": \"{{randomDisk}}\"\r\n   }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/objects",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let res = pm.response.json();\r",
+							"console.log(\"My Device name is:\", res);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/objects",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 2049.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\",\r\n      \"color\": \"silver\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/objects/ff808181932badb601967ffdc40d7f93",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects",
+						"ff808181932badb601967ffdc40d7f93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// pm.test(\"Status code is 200\", function () {\r",
+							"//     pm.response.to.have.status(200);\r",
+							"// });\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/objects/ff808181932badb601967ffdc40d7f93",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects",
+						"ff808181932badb601967ffdc40d7f93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.variables.set(\"name\", \"My Device-\" + Math.floor(Math.random() * 10000));\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"{{name}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/objects/ff808181932badb601968007af097fb7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects",
+						"ff808181932badb601968007af097fb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chaining",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pars the response JSON\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"// Saveing the id from the response into an environment variable\r",
+							"pm.environment.set(\"createdId\", response.id);\r",
+							"\r",
+							"console.log(\"Created ID: \" + response.id);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Samsung Note 10\",\r\n  \"data\": {\r\n    \"color\": \"White\",\r\n    \"capacity\": \"256 GB\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/objects",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chaining 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/objects/{{createdId}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"objects",
+						"{{createdId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
