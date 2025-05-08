@@ -4,7 +4,7 @@ import CartPage from '../support/pages/CartPage';
 
 describe('Add to Cart', () => {
   beforeEach(() => {
-    cy.loginWithValidCredentials(); // your custom command
+    cy.loginWithValidCredentials(); 
   });
 
   it('Verify that clicking on add to cart adds an item to cart', () => {
