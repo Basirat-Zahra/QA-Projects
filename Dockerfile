@@ -1,11 +1,11 @@
 FROM cypress/included:13.1.0
 
-# Set working directory
 WORKDIR /e2e
+
+COPY "Cypress Tests/package*.json" .  
+RUN npm install
 
 COPY "Cypress Tests" .
 
-RUN npm install
-
-# Run tests 
+# Run tests
 CMD ["npx", "cypress", "run"]
