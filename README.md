@@ -53,7 +53,7 @@ Performed REST API testing using Postman and JMeter.
 - Built a Cypress project using Page Object Model (POM) for login, product, cart, and error scenarios.
 - Implemented custom commands and reusable test steps.
 
-### ✅ Playwright UI Automation
+### ✅ Playwright UI Automation -
 
 - Automated UI tests for web applications using Playwright and JavaScript.
 - Validated cross-browser functionality and created reusable page classes.
